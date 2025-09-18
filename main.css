@@ -7,15 +7,21 @@ html {
   "app app app app"
   "main main main main"
   "foot foot foot foot";
-  background-color: blanchedalmond;
+  background-color: dodgerblue;
 }
 
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
   grid-area: app;
   background-color: rosybrown;
+}
+
+h1 {
+  color: black;
 }
 
 nav{
@@ -49,6 +55,7 @@ main{
   align-content: space-between;
   grid-area: main;
   align-items: stretch;
+  background-color: lightblue;
 }
 
 .store-item {
@@ -56,7 +63,7 @@ main{
   flex-direction: row;
   flex-wrap: wrap;
   width: 21%;
-  background-color: gray;
+  background-color: lightslategray;
   margin: 1%;
   padding: 1%;
   align-items: stretch;
@@ -79,4 +86,5 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: darkgray;
 }
