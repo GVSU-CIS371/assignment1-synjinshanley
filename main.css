@@ -1,31 +1,44 @@
 body,
 html {
-  height:100%;
   display: grid;
-  gap: 5px;
   grid-template-rows: 10%, 80%, 10%;
-  grid-template-columns: 25%, 25%, 25%, 25%;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
   grid-template-areas: 
   "app app app app"
   "main main main main"
   "foot foot foot foot";
-  margin: 5px;
-  padding: 5px;
   background-color: blanchedalmond;
 }
 
 header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   grid-area: app;
+  background-color: rosybrown;
 }
 
-header > nav{
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+ul{
   display: flex;
   flex-direction: row;
   align-items: center;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+li {
+  padding: 10px;
+  border-left: 1px solid black;
+}
+
+ul > li:first-child {
+  border-left: none;
 }
 
 
@@ -33,21 +46,29 @@ main{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-evenly;
+  align-content: space-between;
   grid-area: main;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .store-item {
-  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 21%;
   background-color: gray;
   margin: 1%;
   padding: 1%;
+  align-items: stretch;
+  align-content: center;
 }
 
-.store-item > img {
+
+.store-item > span {
+  margin-right: 4%;
+}
+
+img {
   height: auto;
   max-width: 100%;
   align-self: center;
@@ -55,4 +76,7 @@ main{
 
 footer {
   grid-area: foot;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
